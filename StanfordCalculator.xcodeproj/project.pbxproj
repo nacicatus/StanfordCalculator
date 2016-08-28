@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F86241141D73671800C4533F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86241131D73671800C4533F /* AppDelegate.swift */; };
+		F86241171D73671800C4533F /* StanfordCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F86241151D73671800C4533F /* StanfordCalculator.xcdatamodeld */; };
+		F86241191D73671800C4533F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86241181D73671800C4533F /* ViewController.swift */; };
+		F862411C1D73671800C4533F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F862411A1D73671800C4533F /* Main.storyboard */; };
+		F862411E1D73671800C4533F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F862411D1D73671800C4533F /* Images.xcassets */; };
+		F86241211D73671800C4533F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F862411F1D73671800C4533F /* LaunchScreen.xib */; };
+		F862412D1D73671800C4533F /* StanfordCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862412C1D73671800C4533F /* StanfordCalculatorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F86241271D73671800C4533F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F86241061D73671800C4533F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F862410D1D73671800C4533F;
+			remoteInfo = StanfordCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F862410E1D73671800C4533F /* StanfordCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StanfordCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86241121D73671800C4533F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F86241131D73671800C4533F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F86241161D73671800C4533F /* StanfordCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StanfordCalculator.xcdatamodel; sourceTree = "<group>"; };
+		F86241181D73671800C4533F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F862411B1D73671800C4533F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F862411D1D73671800C4533F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F86241201D73671800C4533F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F86241261D73671800C4533F /* StanfordCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanfordCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F862412B1D73671800C4533F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F862412C1D73671800C4533F /* StanfordCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordCalculatorTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F862410B1D73671800C4533F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86241231D73671800C4533F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F86241051D73671800C4533F = {
+			isa = PBXGroup;
+			children = (
+				F86241101D73671800C4533F /* StanfordCalculator */,
+				F86241291D73671800C4533F /* StanfordCalculatorTests */,
+				F862410F1D73671800C4533F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F862410F1D73671800C4533F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F862410E1D73671800C4533F /* StanfordCalculator.app */,
+				F86241261D73671800C4533F /* StanfordCalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F86241101D73671800C4533F /* StanfordCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				F86241131D73671800C4533F /* AppDelegate.swift */,
+				F86241181D73671800C4533F /* ViewController.swift */,
+				F862411A1D73671800C4533F /* Main.storyboard */,
+				F862411D1D73671800C4533F /* Images.xcassets */,
+				F862411F1D73671800C4533F /* LaunchScreen.xib */,
+				F86241151D73671800C4533F /* StanfordCalculator.xcdatamodeld */,
+				F86241111D73671800C4533F /* Supporting Files */,
+			);
+			path = StanfordCalculator;
+			sourceTree = "<group>";
+		};
+		F86241111D73671800C4533F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F86241121D73671800C4533F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F86241291D73671800C4533F /* StanfordCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				F862412C1D73671800C4533F /* StanfordCalculatorTests.swift */,
+				F862412A1D73671800C4533F /* Supporting Files */,
+			);
+			path = StanfordCalculatorTests;
+			sourceTree = "<group>";
+		};
+		F862412A1D73671800C4533F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F862412B1D73671800C4533F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F862410D1D73671800C4533F /* StanfordCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F86241301D73671800C4533F /* Build configuration list for PBXNativeTarget "StanfordCalculator" */;
+			buildPhases = (
+				F862410A1D73671800C4533F /* Sources */,
+				F862410B1D73671800C4533F /* Frameworks */,
+				F862410C1D73671800C4533F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StanfordCalculator;
+			productName = StanfordCalculator;
+			productReference = F862410E1D73671800C4533F /* StanfordCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F86241251D73671800C4533F /* StanfordCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F86241331D73671800C4533F /* Build configuration list for PBXNativeTarget "StanfordCalculatorTests" */;
+			buildPhases = (
+				F86241221D73671800C4533F /* Sources */,
+				F86241231D73671800C4533F /* Frameworks */,
+				F86241241D73671800C4533F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F86241281D73671800C4533F /* PBXTargetDependency */,
+			);
+			name = StanfordCalculatorTests;
+			productName = StanfordCalculatorTests;
+			productReference = F86241261D73671800C4533F /* StanfordCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F86241061D73671800C4533F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Saurabh Sikka";
+				TargetAttributes = {
+					F862410D1D73671800C4533F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F86241251D73671800C4533F = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = F862410D1D73671800C4533F;
+					};
+				};
+			};
+			buildConfigurationList = F86241091D73671800C4533F /* Build configuration list for PBXProject "StanfordCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F86241051D73671800C4533F;
+			productRefGroup = F862410F1D73671800C4533F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F862410D1D73671800C4533F /* StanfordCalculator */,
+				F86241251D73671800C4533F /* StanfordCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F862410C1D73671800C4533F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F862411C1D73671800C4533F /* Main.storyboard in Resources */,
+				F86241211D73671800C4533F /* LaunchScreen.xib in Resources */,
+				F862411E1D73671800C4533F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86241241D73671800C4533F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F862410A1D73671800C4533F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F86241191D73671800C4533F /* ViewController.swift in Sources */,
+				F86241171D73671800C4533F /* StanfordCalculator.xcdatamodeld in Sources */,
+				F86241141D73671800C4533F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F86241221D73671800C4533F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F862412D1D73671800C4533F /* StanfordCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F86241281D73671800C4533F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F862410D1D73671800C4533F /* StanfordCalculator */;
+			targetProxy = F86241271D73671800C4533F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F862411A1D73671800C4533F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F862411B1D73671800C4533F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F862411F1D73671800C4533F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F86241201D73671800C4533F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F862412E1D73671800C4533F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F862412F1D73671800C4533F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F86241311D73671800C4533F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StanfordCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F86241321D73671800C4533F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StanfordCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F86241341D73671800C4533F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StanfordCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StanfordCalculator.app/StanfordCalculator";
+			};
+			name = Debug;
+		};
+		F86241351D73671800C4533F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StanfordCalculatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StanfordCalculator.app/StanfordCalculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F86241091D73671800C4533F /* Build configuration list for PBXProject "StanfordCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F862412E1D73671800C4533F /* Debug */,
+				F862412F1D73671800C4533F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F86241301D73671800C4533F /* Build configuration list for PBXNativeTarget "StanfordCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86241311D73671800C4533F /* Debug */,
+				F86241321D73671800C4533F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F86241331D73671800C4533F /* Build configuration list for PBXNativeTarget "StanfordCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F86241341D73671800C4533F /* Debug */,
+				F86241351D73671800C4533F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F86241151D73671800C4533F /* StanfordCalculator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F86241161D73671800C4533F /* StanfordCalculator.xcdatamodel */,
+			);
+			currentVersion = F86241161D73671800C4533F /* StanfordCalculator.xcdatamodel */;
+			path = StanfordCalculator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F86241061D73671800C4533F /* Project object */;
+}
