@@ -14,6 +14,7 @@
 		F862411E1D73671800C4533F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F862411D1D73671800C4533F /* Images.xcassets */; };
 		F86241211D73671800C4533F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F862411F1D73671800C4533F /* LaunchScreen.xib */; };
 		F862412D1D73671800C4533F /* StanfordCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862412C1D73671800C4533F /* StanfordCalculatorTests.swift */; };
+		F8F4E8871D7666010028EDA4 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4E8861D7666010028EDA4 /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		F86241261D73671800C4533F /* StanfordCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanfordCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F862412B1D73671800C4533F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F862412C1D73671800C4533F /* StanfordCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordCalculatorTests.swift; sourceTree = "<group>"; };
+		F8F4E8861D7666010028EDA4 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				F862411F1D73671800C4533F /* LaunchScreen.xib */,
 				F86241151D73671800C4533F /* StanfordCalculator.xcdatamodeld */,
 				F86241111D73671800C4533F /* Supporting Files */,
+				F8F4E8861D7666010028EDA4 /* CalculatorBrain.swift */,
 			);
 			path = StanfordCalculator;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				F86241191D73671800C4533F /* ViewController.swift in Sources */,
 				F86241171D73671800C4533F /* StanfordCalculator.xcdatamodeld in Sources */,
+				F8F4E8871D7666010028EDA4 /* CalculatorBrain.swift in Sources */,
 				F86241141D73671800C4533F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 				F86241321D73671800C4533F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F86241331D73671800C4533F /* Build configuration list for PBXNativeTarget "StanfordCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				F86241351D73671800C4533F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
