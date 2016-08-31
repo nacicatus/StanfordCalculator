@@ -33,6 +33,7 @@ class CalculatorBrain {
     
     private var opStack = [Op]()
     private var knownOps = Dictionary<String, Op>()
+  
     
     // initialize
     init() {
@@ -79,6 +80,18 @@ class CalculatorBrain {
         return result
         
     }
+    
+//    func pushOperand(symbol: String) -> Double? {
+//        var variableValues = Dictionary<String, Double?>()
+//        for (key, value) in variableValues {
+//            if let zingf = value {
+//                opStack.append(Op.Operand(zingf))
+//                return evaluate()
+//            } else {
+//                return nil
+//            }
+//        }
+//    }
     
     func pushOperand(operand: Double) -> Double? {
         opStack.append(Op.Operand(operand))
