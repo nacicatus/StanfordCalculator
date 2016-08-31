@@ -10,10 +10,24 @@ import Foundation // It's a model, there should never be an import UIKit here
 
 class CalculatorBrain {
     
-    private enum Op {
+    private enum Op : Printable {           //implements a protocol called Printable
         case Operand(Double)
         case UnaryOperation(String, Double ->Double)
         case BinaryOperation(String, (Double, Double) ->Double)
+        
+        var description : String {
+            get {
+                switch self {
+                case .Operand(let operand):
+                    return "\(operand)"
+                case .UnaryOperation(let symbol, _):
+                    return symbol
+                case .BinaryOperation(let symbol, _):
+                    return symbol
+                
+                }
+            }
+        }
         
     }
     
@@ -27,6 +41,8 @@ class CalculatorBrain {
         knownOps["+"] = Op.BinaryOperation("+", +)
         knownOps["-"] = Op.BinaryOperation("-") {$1 - $0}
         knownOps["√"] = Op.UnaryOperation("√", sqrt)
+        knownOps["sin"] = Op.UnaryOperation("sin") {sin($0)}
+        knownOps["cos"] = Op.UnaryOperation("cos") {cos($0)}
     }
     
     private func evaluateStack(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
@@ -59,18 +75,22 @@ class CalculatorBrain {
     
     func evaluate() -> Double? {
         let (result, remainder) = evaluateStack(opStack)
+        print("\(opStack) = \(result) with \(remainder) left over")
         return result
+        
     }
     
-    func pushOperand(operand: Double) {
+    func pushOperand(operand: Double) -> Double? {
         opStack.append(Op.Operand(operand))
+        return evaluate()
     }
     
-    func performOperation(symbol: String) {
+    func performOperation(symbol: String) -> Double? {
         if let operation = knownOps[symbol] {
             opStack.append(operation)
-            
         }
+        return evaluate()
     }
+    
 
 }

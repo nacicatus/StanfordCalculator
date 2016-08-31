@@ -16,12 +16,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var stackDisplay: UILabel!
     
-    var operandStack = [Double]()
+    var brain = CalculatorBrain()
+    
     
     @IBAction func enter() {
         userIsInTheMiddleOfTypingANumber = false
-        operandStack.append(displayValue)
-        stackDisplay.text! = "\(operandStack)\n"
+        if let result = brain.pushOperand(displayValue) {
+            displayValue = result
+            calculatorDisplay.text = "\(result)"
+        } else {
+            displayValue = 0
+        }
     }
     
     @IBAction func operate(sender: UIButton) {
@@ -29,31 +34,18 @@ class ViewController: UIViewController {
         if userIsInTheMiddleOfTypingANumber {
             enter()
         }
+        if let operation = sender.currentTitle {
+            if let result = brain.performOperation(operation) {
+                displayValue = result
+            } else {
+                displayValue = 0
+            }
+        }
         
-        switch operation {
-        case "×": performOperation {$0 * $1}
-        case "÷": performOperation {$1 / $0}
-        case "+": performOperation {$0 + $1}
-        case "-": performOperation {$1 - $0}
-        case "√": performOperation2 {sqrt($0)}
-        case "sin": performOperation2 {sin($0)}
-        case "cos":performOperation2 {cos($0)}
-        default: break
-        }
     }
     
-    func performOperation (operation: (Double, Double) ->Double) {
-        if operandStack.count >= 2 {
-            displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
-            enter()
-        }
-    }
-    
-    func performOperation2 (operation: Double -> Double) {
-        if operandStack.count >= 1 {
-            displayValue = operation(operandStack.removeLast())
-            enter()
-        }
+    @IBAction func clear(sender: UIButton) {
+        calculatorDisplay.text = "0"
     }
     
     var displayValue: Double {
@@ -66,21 +58,7 @@ class ViewController: UIViewController {
         }
     }
    
-    @IBAction func clear(sender: UIButton) {
-        do {
-            operandStack.removeLast()
-        } while operandStack.count >  0
-        calculatorDisplay.text = "\(0)"
-        userIsInTheMiddleOfTypingANumber = false
-        print(operandStack)
-        
-    }
-    
-    
-    @IBAction func appendPi(sender: UIButton) {
-      displayValue = M_PI
-        enter()
-    }
+
     
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
