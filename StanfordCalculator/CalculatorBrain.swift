@@ -58,6 +58,35 @@ class CalculatorBrain {
         //knownOps["cos"] = Op.UnaryOperation("cos") {cos($0)}
     }
     
+    
+    // We're going to report back a PropertyList
+    typealias PropertyList = AnyObject
+    var program: PropertyList {
+        get {
+            return opStack.map { $0.description }
+//            var returnValue = [String]()
+//            for op in opStack {
+//                returnValue.append(op.description)
+//            }
+//            return returnValue
+        }
+        set {
+            if let opSymbols = newValue as? [String] {
+                var newOpStack = [Op]()
+                for opSymbol in opSymbols {
+                    if let op = knownOps[opSymbol] {
+                        newOpStack.append(op)
+                    } else if let operand = NSNumberFormatter().numberFromString(opSymbol)?.doubleValue {
+                        newOpStack.append(.Operand(operand))
+                    }
+                }
+                opStack = newOpStack
+            }
+        }
+    }
+    
+    
+    
     private func evaluateStack(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
         
         if !ops.isEmpty {
