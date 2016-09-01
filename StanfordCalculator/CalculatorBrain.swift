@@ -37,13 +37,25 @@ class CalculatorBrain {
     
     // initialize
     init() {
-        knownOps["×"] = Op.BinaryOperation("×", *)
-        knownOps["÷"] = Op.BinaryOperation("÷") {$1 / $0}
-        knownOps["+"] = Op.BinaryOperation("+", +)
-        knownOps["-"] = Op.BinaryOperation("-") {$1 - $0}
-        knownOps["√"] = Op.UnaryOperation("√", sqrt)
-        knownOps["sin"] = Op.UnaryOperation("sin") {sin($0)}
-        knownOps["cos"] = Op.UnaryOperation("cos") {cos($0)}
+        
+        func learnOp(op: Op) {
+            knownOps[op.description] = op
+        }
+        
+        learnOp(Op.BinaryOperation("×", *))
+        //knownOps["×"] = Op.BinaryOperation("×", *)
+        learnOp(Op.BinaryOperation("÷", {$1 / $0}))
+        //knownOps["÷"] = Op.BinaryOperation("÷") {$1 / $0}
+        learnOp(Op.BinaryOperation("+", +))
+        //knownOps["+"] = Op.BinaryOperation("+", +)
+        learnOp(Op.BinaryOperation("-", {$1 - $0}))
+        //knownOps["-"] = Op.BinaryOperation("-") {$1 - $0}
+        learnOp(Op.UnaryOperation("√", sqrt))
+        //knownOps["√"] = Op.UnaryOperation("√", sqrt)
+        learnOp(Op.UnaryOperation("sin", {sin($0)}))
+        //knownOps["sin"] = Op.UnaryOperation("sin") {sin($0)}
+        learnOp(Op.UnaryOperation("cos", {cos($0)}))
+        //knownOps["cos"] = Op.UnaryOperation("cos") {cos($0)}
     }
     
     private func evaluateStack(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {
