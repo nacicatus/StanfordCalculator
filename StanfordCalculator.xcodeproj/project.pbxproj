@@ -83,12 +83,12 @@
 			children = (
 				F86241131D73671800C4533F /* AppDelegate.swift */,
 				F86241181D73671800C4533F /* ViewController.swift */,
+				F8F4E8861D7666010028EDA4 /* CalculatorBrain.swift */,
 				F862411A1D73671800C4533F /* Main.storyboard */,
 				F862411D1D73671800C4533F /* Images.xcassets */,
 				F862411F1D73671800C4533F /* LaunchScreen.xib */,
 				F86241151D73671800C4533F /* StanfordCalculator.xcdatamodeld */,
 				F86241111D73671800C4533F /* Supporting Files */,
-				F8F4E8861D7666010028EDA4 /* CalculatorBrain.swift */,
 			);
 			path = StanfordCalculator;
 			sourceTree = "<group>";

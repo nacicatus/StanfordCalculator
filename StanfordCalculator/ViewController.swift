@@ -14,46 +14,113 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var calculatorDisplay: UILabel!
     
-    @IBOutlet weak var stackDisplay: UILabel!
+    @IBOutlet weak var history: UILabel!
     
     var brain = CalculatorBrain()
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        updateHistory()
+    }
+    
+    @IBAction func appendDecimal(sender: UIButton) {
+        let decimalSymbol = sender.currentTitle!
+        if userIsInTheMiddleOfTypingANumber {
+            if calculatorDisplay.text?.rangeOfString(decimalSymbol) == nil {
+                calculatorDisplay.text = calculatorDisplay.text! + decimalSymbol
+            }
+        } else {
+            userIsInTheMiddleOfTypingANumber = true
+            calculatorDisplay.text = "0" + decimalSymbol
+        }
+    }
     
     @IBAction func enter() {
-        userIsInTheMiddleOfTypingANumber = false
-        if let result = brain.pushOperand(displayValue!) {
-            displayValue = result
-            calculatorDisplay.text = "\(result)"
-        } else {
-            displayValue = 0
+        if displayValue == nil {
+            return
         }
+        userIsInTheMiddleOfTypingANumber = false
+        displayValue = brain.pushOperand(displayValue!)
+        updateHistory()
     }
     
     @IBAction func operate(sender: UIButton) {
-        let operation = sender.currentTitle!
-        if userIsInTheMiddleOfTypingANumber {
-            enter()
-        }
         if let operation = sender.currentTitle {
-            if let result = brain.performOperation(operation) {
-                displayValue = result
-            } else {
-                displayValue = 0
+            if userIsInTheMiddleOfTypingANumber {
+                if operation == "±" {
+                    if let oldDisplayValue = displayValue {
+                        if oldDisplayValue.isSignMinus {
+                            calculatorDisplay.text = dropFirst(calculatorDisplay.text!)
+                        }
+                        if !oldDisplayValue.isZero {
+                            calculatorDisplay.text = "-" + calculatorDisplay.text!
+                        }
+                    }
+                    return
+                } else {
+                    enter()
+                }
             }
+            displayValue = brain.performOperation(operation)
+            updateHistory()
         }
-        
     }
     
     @IBAction func clear(sender: UIButton) {
-        displayValue = 0
+        brain.clear()
+        brain.variableValues.removeAll(keepCapacity: false)
+        resetDisplayText()
+        updateHistory()
+    }
+    
+    
+    @IBAction func backspace() {
+        if (!userIsInTheMiddleOfTypingANumber) {
+            displayValue = brain.undoOp()
+            updateHistory()
+            return
+        }
+        if count(calculatorDisplay.text!) > 1 {
+            calculatorDisplay.text = dropLast(calculatorDisplay.text!)
+        } else {
+            resetDisplayText()
+        }
+    }
+    
+    private let memoryVariableName = "M"
+    
+    @IBAction func setMemoryValue(sender: UIButton) {
+        if let newMemoryValue = displayValue {
+            userIsInTheMiddleOfTypingANumber = false
+            brain.variableValues.updateValue(newMemoryValue, forKey: memoryVariableName)
+            displayValue = brain.evaluate()
+            updateHistory()
+        }
+    }
+    
+    private func updateHistory() {
+        history.text = brain.description
+    }
+    
+    private func resetDisplayText() {
+        calculatorDisplay.text = "0"
+        userIsInTheMiddleOfTypingANumber = false
     }
     
     var displayValue: Double? {
         get {
-            return NSNumberFormatter().numberFromString(calculatorDisplay.text!)!.doubleValue
+            if let displayText = calculatorDisplay.text {
+                return NSNumberFormatter().numberFromString(displayText)?.doubleValue
+            }
+            return nil
+            
         }
         set {
-            calculatorDisplay.text = "\(newValue)"
+            if let newNumber = newValue {
+                calculatorDisplay.text = "\(newNumber)"
+            } else {
+                calculatorDisplay.text = nil
+            }
             userIsInTheMiddleOfTypingANumber = false
         }
     }
@@ -69,7 +136,6 @@ class ViewController: UIViewController {
             calculatorDisplay.text = digit
             userIsInTheMiddleOfTypingANumber = true
         }
-        
     }
 
 }
